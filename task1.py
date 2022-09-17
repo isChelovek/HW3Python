@@ -9,6 +9,6 @@ def GetSummOddPlaces():
     print()
     print("Введите список из нескольких целочисленых чисел разделеннныx запятой или пробел")
     userList  = [int(i) for i in input().split(',')]
-    print(f"{userList} -> на нечётных позициях элементы {str(userList).replace(', ', ' и ')[1:-1]}, ответ: {sum(userList[1::2])}")
+    print(f"{userList} -> на нечётных позициях элементы {str(userList[0::2]).replace(', ', ' и ').replace('[', '').replace(']', '')}, ответ: {sum(userList[0::2])}")
 
 GetSummOddPlaces()
